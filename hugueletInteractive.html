@@ -1,0 +1,669 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+		<title>Missourian Infographics</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+		<!-- Main stylesheet -->
+		<link rel="stylesheet" type="text/css" href="css/interactivescentered.css" />
+  		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+  		<style type="text/css">
+  		.clear {
+		    clear: both;
+		}
+		.centered {
+
+		    text-align: center;
+		    margin: 30px auto 0 auto ;
+		}
+		.headline h1 {
+		    font-family: georgia;
+		    font-size: 50px;
+		    margin: 30px auto 0 auto
+		}
+		.chatter p {
+		    font-family: georgia;
+		    font-size: 18px;
+		    margin: 20px auto 0 auto
+		}
+		.byline {
+		    font-family: georgia;
+		    font-weight: bold;
+		    margin: 10px auto 0 auto
+		}
+
+		/* ABOUT THE SINGLE-DOUBLE-TRIPLE CLASSES */
+		.single {
+		    width: 100%;
+		    height: auto;
+		    margin: auto; 
+		}
+
+		.left {
+		    width: 460px;
+		    height: auto;
+		    margin: auto;
+		    float: left; 
+		}
+
+		.right {
+		    width: 460px;
+		    height: auto;
+		    margin: auto;
+		    float: right; 
+		}
+
+		.triple {
+		    width: 30%;
+		    height: auto;
+		    margin: auto;
+		    padding: 0 3% 0 0;
+		    float: left; 
+		}
+
+		/* ALL ABOUT THE GRAPHIC DIV */
+
+		.graphic{
+		    width: 100%;
+		    height: 600;
+		    margin: 0px auto 0 auto ;
+		}
+
+		.graphic h2 {
+		    padding: 5px;
+		    margin: 0 0 4px 0;
+		    font-family: arial black;
+		    font-size: 20px;
+		    line-height: 1em;
+		}
+		    
+		.graphic p {
+		    width: 97%;
+		    padding: 5px;
+		    margin: 0 0 0 0;
+		    font-family: Georgia;
+		    font-size: 16px;
+		    line-height: 1.3em;
+		}
+
+		.graphic footer {
+		    width: 100%;
+		    text-align: right;
+		    font-family: arial narrow;
+		    font-size: 14px;
+		    margin: auto;
+		    color: gray;
+		}
+
+		.graphic img{
+		    width: 100%;
+		    height: auto;
+		}
+		        
+		.graphic div{
+		    width: 100%;
+		    height: auto;
+		}
+
+		/* different graphic div for */
+		/* local legislators */
+		/* ALL ABOUT THE GRAPHIC DIV */
+
+		.comographic{
+		    width: 100%;
+		    height: 600;
+		    margin: 0px auto 0 auto ;
+		}
+
+		.comographic h2 {
+		    padding: 5px;
+		    margin: 0 0 4px 0;
+		    font-family: arial black;
+		    font-size: 20px;
+		    line-height: 1em;
+		}
+		    
+		.comographic p {
+		    width: 97%;
+		    padding: 5px;
+		    margin: 0 0 0 0;
+		    font-family: Georgia;
+		    font-size: 16px;
+		    line-height: 1.3em;
+		}
+
+		.comographic footer {
+		    width: 97%;
+		    text-align: right;
+		    font-family: arial narrow;
+		    font-size: 14px;
+		    margin: auto;
+		    color: gray;
+		}
+
+		.comographic img{
+		    width: 140px;
+		    height: 100%;
+		    padding: 5px;
+		}
+		        
+		.comographic div{
+		    height: auto;
+		}
+
+		/* Styles for riseOverTime */
+		.riseTooltip {
+		    position: absolute;
+		    padding: 12px;
+		    background: #fff;
+		    opacity: 0.9;
+		    -moz-border-radius:5px;
+		    border-radius: 5px;
+		    border: 2px solid #000;
+		    pointer-events: none;
+		    border-radius: 2px;
+		    text-align: center;
+		    font-size: 14px;
+		    width: 150px;
+		    font-family: sans-serif; 
+		}
+
+		.riseTooltip:after {
+		    box-sizing: border-box;
+		    display: inline;
+		    font-size: 14px;
+		    width: 100%; 
+		    line-height: 1;
+		    color: rgba(0, 0, 0, 0.8);
+		    content: "\25BC";
+		    position: absolute;
+		    text-align: center;
+		    }
+		.riseTooltip.n:after {
+		    margin: 0px 0 0 0;
+		    top: 100%;
+		    left: 0;
+		}
+
+		/* Styles for topIndustries */
+		.industryTooltip {
+		    position: absolute;
+		    top: 100px;
+		    left: 100px;
+		    -moz-border-radius:5px;
+		    border-radius: 5px;
+		    border: 2px solid #000;
+		    /* background: #222222; */
+		    background: #fff;
+		    opacity: .9;
+		    /* color: #eeeeee; */
+		    color: black;
+		    padding: 10px;
+		    font-family: arial, serif;
+		    width: 400px;
+		    font-size: 14px;
+		    z-index: 10;
+		}
+		.industryTooltip:after {
+		    box-sizing: border-box;
+		    display: inline;
+		    font-size: 14px;
+		    width: 100%; 
+		    line-height: 1;
+		    color: rgba(0, 0, 0, 0.8);
+		    content: "\25BC";
+		    position: absolute;
+		    text-align: center;
+		    }
+		.industryTooltip.n:after {
+		    margin: 0px 0 0 0;
+		    top: 100%;
+		    left: 0;
+		}
+
+		/* Styles for topGivers and topLegislators */
+		.bubbleTooltip {
+		    position: absolute;
+		    top: 100px;
+		    left: 100px;
+		    -moz-border-radius:5px;
+		    border-radius: 5px;
+		    border: 2px solid #000;
+		    /* background: #222222; */
+		    background: #fff;
+		    opacity: .9;
+		    /* color: #eeeeee; */
+		    color: black;
+		    padding: 10px;
+		    font-family: arial, serif;
+		    width: 300px;
+		    font-size: 14px;
+		    z-index: 10;
+		}
+		.bubbleTooltip .name {
+		    font-weight:bold;
+		}
+
+		/* Styles for bar chart bars and axes */
+		/* Bar styles */
+		.bar {
+		    fill: #008000;
+		}
+		.bar:hover {
+		    fill: #99CC99;
+		}
+		/* Axis styles */
+		.axis path,
+		.axis line {
+		    fill: none;
+		    stroke: black;
+		    shape-rendering: crispEdges;
+		}
+		.x.axis path {
+		    display: none;
+		}
+		.y.axis path {
+		    display: none;
+		}
+		.axis {
+		    font-family: arial, serif;
+		    font-size: 16px;
+		}
+		.inflation {
+		    position: relative;
+		    font-family: arial;
+		    font-style: italic;
+		    font-size: 14px;
+		    margin: 100px;
+		    top: 10px;
+		}
+		/* More chart-specific styles */
+		/* --------------------- */
+
+		.arc path {
+		    stroke: #fff;
+		    stroke-width: 2;
+		}
+		.arc path:hover {
+		    pointer-events: all;
+		}
+		/* #vis styles for bubble charts */
+		#vis {
+		    width: 950px;
+		    height: 550px;
+		    margin: auto auto 25px 25px;
+		}
+		#vis2 {
+		    width: 950px;
+		    height: 600px;
+		    margin: auto auto 25px 25px;
+		}
+		#vis3 {
+		    width: 950px;
+		    height: 400px;
+		    margin: auto;
+		}
+		#vis4 {
+		    width: 450px;
+		    height: 405px;
+		    margin: auto;
+		}
+		#vis5{
+		    width: auto;
+		    height: 500px;
+		    margin: auto;
+		}
+		/* Style for topLegislators bubble chart */
+		.category {
+		    font-family: arial, serif;
+		    font-size: 18px;
+		    font-weight: bold;
+		    fill: #000;
+		}
+
+		/* Style for topGivers bubble chart */
+		.category2 {
+		    font-family: arial, serif;
+		    font-size: 16px;
+		    fill: #000;
+		}
+		.toptext {
+		    position: relative;
+		    left: 71px;
+		    top: 20px;
+		    font-family: arial, serif;
+		    font-size: 16px;
+		    font-weight: bold;
+		    color: black;
+		    background-color: white;
+		    margin-top: -10;
+		}
+		.toptext2 {
+		    position: relative;
+		    left: 98px;
+		    top: 20px;
+		    font-family: arial, serif;
+		    font-size: 16px;
+		    font-weight: bold;
+		    color: black;
+		    background-color: white;
+		}
+		.toptext3 {
+		    position: relative;
+		    left: 127px;
+		    top: 20px;
+		    font-family: arial, serif;
+		    font-size: 16px;
+		    font-weight: bold;
+		    color: black;
+		    background-color: white;
+		}
+		.toptext4 {
+		    position: relative;
+		    left: 147px;
+		    top: 20px;
+		    font-family: arial, serif;
+		    font-size: 16px;
+		    font-weight: bold;
+		    color: black;
+		    background-color: white;
+		}
+		.toptext5 {
+		    position: relative;
+		    left: 175px;
+		    top: 20px;
+		    font-family: arial, serif;
+		    font-size: 16px;
+		    font-weight: bold;
+		    color: black;
+		    background-color: white;
+		}
+
+		/* Style for map legend labels*/
+		.keytext {
+		    position: relative;
+		    left: 57px;
+		    top: 9.5px;
+		    font-family: arial, serif;
+		    font-size: 16px;
+		    /*font-weight: bold;*/
+		    color: black;
+		    background-color: white;
+		}
+		.keytext2 {
+		    position: relative;
+		    left: 57px;
+		    top: 20px;
+		    font-family: arial, serif;
+		    font-size: 16px;
+		    /*font-weight: bold;*/
+		    color: black;
+		    background-color: white;
+		}
+
+		.keytext3 {
+		    position: relative;
+		    left: 57px;
+		    top: 30px;
+		    font-family: arial, serif;
+		    font-size: 16px;
+		    /*font-weight: bold;*/
+		    color: black;
+		    background-color: white;
+		}
+		#box {
+		    position: relative;
+		    left: 11px;
+		    top: -50px;
+		    width: 40px; 
+		    height: 20px;
+		    background-color: #B2D8B2;
+		}
+		#box2 {
+		    position: relative;
+		    left: 11px;
+		    top: -40px;
+		    width: 40px; 
+		    height: 20px;
+		    background-color: #66B266;
+		}
+		#box3 {
+		    position: relative;
+		    left: 11px;
+		    top: -30px;
+		    width: 40px; 
+		    height: 20px;
+		    background-color: #008000;
+		}
+
+		/* Styles for local legislators */
+		.legislator {
+		    float: left;
+		    width: 140px;
+		    height: auto;
+		    margin: 6px;
+		    text-align: center;
+
+		}
+		.legislatortext {
+		    width: 145px;
+		    float: left;
+		    font-family: arial, serif;
+		    font-size: 14px;
+		    position: relative;
+		    top: -5px;
+		    left: 5px;
+		}
+		</style>
+
+
+		<!-- Javascript files -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
+
+		<!-- Libraries -->
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+		<script src="js/libs/modernizr-2.0.6.min.js"></script>
+
+
+		<!-- Bubble chart auxiliary scripts -->
+		<script defer src="js/plugins.js"></script>
+		<script defer src="js/script.js"></script>
+		<script src="js/CustomTooltip.js"></script>
+		<script src="js/CustomTooltip2.js"></script>
+</head>
+
+
+<body id="site" class="base">
+
+	<div id="main" style="max-width: 950px; margin: auto; min-width: 950px;">
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+
+		<!-- Headline and chatter -->
+		<div class="centered">
+				<div class="headline">
+					<h1>Missouri's million-dollar legislature</h1>
+				</div>
+				<div class="chatter">
+					<p>Since 1875, Missouri legislators have taken an oath of office that includes this promise: “I will not knowingly receive, directly or indirectly, any money or other valuable thing for the performance or nonperformance of any act or duty pertaining to my office, other than the compensation allowed by law.” But the oath lacks force without an enacted limit on the amount of gifts legislators can receive from lobbyists. From October 2012 to September 2014, matching the length of time between statewide elections, legislators and their staffs and family members received $1,813,768.74 in gifts from organizations with interests in the General Assembly’s activities. In this graphic, all gifts to a legislator's staff and family members are included under the legislator's name, so amounts received should be interpreted as the total amount received by the office of each legislator.</p>
+				</div>
+				<div class="byline">By <a href="http://www.columbiamissourian.com/accounts/profiles/dahuguelet/">Austin Huguelet</a></div>
+				<hr />
+		</div> 
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+		<!-- /////////////////////////// Graphics start here /////////////////////////// -->
+
+		<!-- riseOverTime column chart-->
+		 <div class="left">
+			<div class="graphic">
+				<h2>Lobbying up 21 percent since 2010</h2>
+				<p>2004 saw a record high for lobbying, when more than a milion dollars were spent. Since then Missouri hasn’t seen a million-dollar spending year. 2013's $966,000 came in second place in the past 10 years and marked a 21 percent increase from 2010's low point. *Note: 2014's total reflects gifts from January through September, as ethics data for later months have not yet been published.</p>
+				<text class="inflation"> Figures adjusted for inflation
+				</text>
+				<div id="vis4"></div> 
+				<!-- Source line -->
+			 </div>
+		</div> 
+
+		<!-- Map comparing Missouri's lobbying regulations to other states' rules-->
+
+		<div class="right">
+			<div class="graphic">
+				<h2>No limits for Missouri lobbyists</h2>
+				<p> Twenty-three states have placed limits on gifts that their state legislators receive from lobbyists. Twelve states have banned the practice. Missouri is one of the 15 states without limits on lobbyist gifts, meaning hundreds of thousands of dollars, World Series tickets and steak dinners are all fair game for anyone looking to exert influence in the legislature.</p> 
+
+				<!-- Text boxes for the legend -->
+				<text class="keytext">Gifts from lobbyists have no limits<br></text>
+				<text class="keytext2">Gifts from lobbyists are limited<br></text>
+				<text class="keytext3">Gifts from lobbyists are banned</text>
+
+				<!-- Color-coded boxes matching the map -->
+				<div id="box"></div>
+				<div id="box2"></div>
+				<div id="box3"></div>
+
+				<div><img src="images/lobbymap.png"></div>
+
+			 </div>
+		</div>
+		<div class="clear"></div> 
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+		<!-- topLegislators bubble chart -->
+		 <div class="single">
+			<hr />
+			<div class="graphic">
+				<h2> The lobbied legislators</h2>
+				<p>Whether lawmakers should accept gifts from lobbyists is an issue that's been debated in newspaper columns, nightly broadcasts and the General Assembly itself. But what isn't debatable is lobbying's popularity. Legislators accepted gifts ranging from pricey 2014 World Series tickets to $2 sodas, and lobbyists didn't discriminate by party: 68 percent of gifts went to Republican legislators that control 72 percent of seats in the General Assembly, and 32 percent went to Democrats that control 28 percent of seats. </p>
+      			<div id="vis2"></div> 
+  
+
+			</div>
+			<hr />
+		</div>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+		<!-- Local Legislator info boxes -->
+		<div class="left">
+			<div class="comographic">
+				<h2>How Columbia's delegation stands</h2>
+				<p>Legislators representing parts of Columbia and Boone County run the gamut in their amounts received from lobbyists, and in some cases their staff members were lobbied much more than the lawmakers themselves. Sen. Kurt Schaefer, R-Columbia, for example, is listed as personally receiving just $822.86 of the nearly $12,000 he and his staff received from lobbyists. His staff accounted for the other $10,961.99. Rep. John Wright, D-Rocheport, was one of two incumbent legislators that pledged not to accept gifts from lobbyists.</p>
+				<!-- Sen. Kurt Schaefer -->
+				  <div class="legislator">
+	       			<img src="images/KurtSchaefer.gif"/>
+	       			<text class="legislatortext"><strong>Sen. Kurt Schaefer</strong><br>R-19th District<br>
+					Received <strong>$11,784.85</strong><br><strong>7th</strong> most of 188
+					</text>
+       			</div> 
+
+       			<!-- Rep. Caleb Rowden -->
+       			 <div class="legislator">
+	       			<img src="images/CalebRowden.gif"/>
+	       			<text class="legislatortext"><strong>Rep. Caleb Rowden</strong><br>R-44th District<br>Received <strong>$3,509.56</strong><br><strong>61st</strong> most of 188
+					</text>
+       			</div> 
+
+       			<!-- Rep. Chris Kelly -->
+        		  <div class="legislator">
+	       			<img src="images/ChrisKelly.gif"/>
+	       			<text class="legislatortext"><strong>Rep. Chris Kelly</strong><br>D-45th District<br>Received <strong>$2,874.34</strong><br><strong>74th</strong> most of 188 </text>
+       			</div>
+
+       			<!-- Rep. Caleb Jones -->
+       			  <div class="legislator">
+       				<img src="images/CalebJones.gif"/>
+       				<text class="legislatortext"><strong>Rep. Caleb Jones</strong><br>R-50th District<br>
+					Received <strong>$1,144.61</strong><br>
+					<strong>127th</strong> most of 188
+					</text>
+				</div> 
+
+				<!-- Rep. Stephen Webber -->
+				 <div class="legislator">
+       				<img src="images/StephenWebber.gif"/>
+       				<text class="legislatortext"><strong>Rep. Stephen Webber</strong><br>D-46th District<br>Received <strong>$997.22</strong><br><strong>134th</strong> most of 188
+					</text>
+				</div>
+
+				<!-- Rep. John Wright -->
+				  <div class="legislator">
+       				<img src="images/JohnWright.gif"/>
+       				<text class="legislatortext"><strong>Rep. John Wright</strong><br>D-47th District<br>Received <strong>$0</strong><br> Unranked
+					</text>
+				</div>
+				<div class="clear"></div>
+
+			 </div>
+		</div>	
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+		<!-- topGroups pie chart -->
+		  <div class="right">
+			<div class="graphic">
+				<h2>Majority of gifts go to groups</h2>
+				<p>Thirty-four percent of gifts are filed in ethics reports as going to an individual legislator. The rest, nearly $1.2 million in the last 24 months, went to groups or committees within the legislature. The reports do not note whether a gift went to one legislator in a group or several recipients. The amounts range from $604,122 for the "Entire General Assembly" to $296.59 for the Standing Committee on Government Oversight and Accountability.</p>
+				  <div id="vis5"></div>  
+
+			  </div> 
+		</div> 
+		 <div class="clear"></div>  
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+		<!-- topGivers bubble chart-->
+		<div class="single">
+			<hr />
+			<div class="graphic">
+				<h2>Select few organizations are biggest gift-givers</h2>
+				<p>More than 500 firms, corporations and organizations lobbied Missouri legislators from October 2012 to September 2014. But the 13 organizations that gave more than $25,000 in gifts, which make up just 2.4 percent of all givers, represent approximately $609,000, slightly more than a third of all gifts. The top ranks are led by energy stalwart Ameren and include powerful industry organizations such as the Missouri Beverage Association and lobbying firms such as John Bardgett & Associates. Percentages are rounded.</p>
+				<!-- Category labels -->
+				 <text class="toptext">Less than $1,000</text>
+        		<text class="toptext2">$1,000 to $4,999</text>
+        		<text class="toptext3">$5,000 to $9,999</text>
+        		<text class="toptext4">$10,000 to $24,999</text>
+        		<text class="toptext5">More than $25,000</text>
+      			<div id="vis">
+        		</div>
+
+			</div>
+			<hr />
+			<div class="clear"><clear>
+		</div>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+	<!-- topIndustries horizontal bar chart-->
+		 <div class="single">
+			<div class="graphic">
+				<h2>Lobbyists and lawyers lead lobbying ranks</h2>
+				<p>Legal and lobbying firms, featuring top-ten donors and strategic government consultants John Bardgett & Associates and Flotron & McIntosh, made up the most generous industries to legislators during the past 24 months. But the data may illustrate how the numbers could be skewed, as other organizations could hire lobbying firms to curry favor on their behalf and file an ethics report with the lobbying firm's name on it.</p>
+				<div id="vis3"></div>
+				<!-- Source line -->
+				<footer>Sources: MISSOURI ETHICS COMMISSION, LOBBYINGMISSOURI.COM</footer>
+				</div>
+			</div>
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+	</div> <!-- closes "main" -->
+
+<!-- D3 scripts -->
+<script src="js/visGivers.js"></script>
+<script src="js/visLegislators.js"></script>
+<script src="js/riseOverTime.js"></script>
+<script src="js/topIndustries.js"></script>
+<script src="js/topGroups.js"></script>
+
+
+
+
+</body>
+</html>

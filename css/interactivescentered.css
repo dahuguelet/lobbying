@@ -1,0 +1,448 @@
+.clear {
+    clear: both;
+}
+.centered {
+
+    text-align: center;
+    margin: 30px auto 0 auto ;
+}
+.headline h1 {
+    font-family: georgia;
+    font-size: 50px;
+    margin: 30px auto 0 auto
+}
+.chatter p {
+    font-family: georgia;
+    font-size: 18px;
+    margin: 20px auto 0 auto
+}
+.byline {
+    font-family: georgia;
+    font-weight: bold;
+    margin: 10px auto 0 auto
+}
+
+/* ABOUT THE SINGLE-DOUBLE-TRIPLE CLASSES */
+.single {
+    width: 100%;
+    height: auto;
+    margin: auto; 
+}
+
+.left {
+    width: 460px;
+    height: auto;
+    margin: auto;
+    float: left; 
+}
+
+.right {
+    width: 460px;
+    height: auto;
+    margin: auto;
+    float: right; 
+}
+
+.triple {
+    width: 30%;
+    height: auto;
+    margin: auto;
+    padding: 0 3% 0 0;
+    float: left; 
+}
+
+/* ALL ABOUT THE GRAPHIC DIV */
+
+.graphic{
+    width: 100%;
+    height: 600;
+    margin: 0px auto 0 auto ;
+}
+
+.graphic h2 {
+    padding: 5px;
+    margin: 0 0 4px 0;
+    font-family: arial black;
+    font-size: 20px;
+    line-height: 1em;
+}
+    
+.graphic p {
+    width: 97%;
+    padding: 5px;
+    margin: 0 0 0 0;
+    font-family: Georgia;
+    font-size: 16px;
+    line-height: 1.3em;
+}
+
+.graphic footer {
+    width: 100%;
+    text-align: right;
+    font-family: arial narrow;
+    font-size: 14px;
+    margin: auto;
+    color: gray;
+}
+
+.graphic img{
+    width: 100%;
+    height: auto;
+}
+        
+.graphic div{
+    width: 100%;
+    height: auto;
+}
+
+/* different graphic div for */
+/* local legislators */
+/* ALL ABOUT THE GRAPHIC DIV */
+
+.comographic{
+    width: 100%;
+    height: 600;
+    margin: 0px auto 0 auto ;
+}
+
+.comographic h2 {
+    padding: 5px;
+    margin: 0 0 4px 0;
+    font-family: arial black;
+    font-size: 20px;
+    line-height: 1em;
+}
+    
+.comographic p {
+    width: 97%;
+    padding: 5px;
+    margin: 0 0 0 0;
+    font-family: Georgia;
+    font-size: 16px;
+    line-height: 1.3em;
+}
+
+.comographic footer {
+    width: 97%;
+    text-align: right;
+    font-family: arial narrow;
+    font-size: 14px;
+    margin: auto;
+    color: gray;
+}
+
+.comographic img{
+    width: 140px;
+    height: 100%;
+    padding: 5px;
+}
+        
+.comographic div{
+    height: auto;
+}
+
+/* Styles for riseOverTime */
+.riseTooltip {
+    position: absolute;
+    padding: 12px;
+    background: #fff;
+    opacity: 0.9;
+    -moz-border-radius:5px;
+    border-radius: 5px;
+    border: 2px solid #000;
+    pointer-events: none;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 14px;
+    width: 150px;
+    font-family: sans-serif; 
+}
+
+.riseTooltip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 14px;
+    width: 100%; 
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+    }
+.riseTooltip.n:after {
+    margin: 0px 0 0 0;
+    top: 100%;
+    left: 0;
+}
+
+/* Styles for topIndustries */
+.industryTooltip {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    -moz-border-radius:5px;
+    border-radius: 5px;
+    border: 2px solid #000;
+    /* background: #222222; */
+    background: #fff;
+    opacity: .9;
+    /* color: #eeeeee; */
+    color: black;
+    padding: 10px;
+    font-family: arial, serif;
+    width: 400px;
+    font-size: 14px;
+    z-index: 10;
+}
+.industryTooltip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 14px;
+    width: 100%; 
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+    }
+.industryTooltip.n:after {
+    margin: 0px 0 0 0;
+    top: 100%;
+    left: 0;
+}
+
+/* Styles for topGivers and topLegislators */
+.bubbleTooltip {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    -moz-border-radius:5px;
+    border-radius: 5px;
+    border: 2px solid #000;
+    /* background: #222222; */
+    background: #fff;
+    opacity: .9;
+    /* color: #eeeeee; */
+    color: black;
+    padding: 10px;
+    font-family: arial, serif;
+    width: 300px;
+    font-size: 14px;
+    z-index: 10;
+}
+.bubbleTooltip .name {
+    font-weight:bold;
+}
+
+/* Styles for bar chart bars and axes */
+/* Bar styles */
+.bar {
+    fill: #008000;
+}
+.bar:hover {
+    fill: #99CC99;
+}
+/* Axis styles */
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+.x.axis path {
+    display: none;
+}
+.y.axis path {
+    display: none;
+}
+.axis {
+    font-family: arial, serif;
+    font-size: 16px;
+}
+.inflation {
+    position: relative;
+    font-family: arial;
+    font-style: italic;
+    font-size: 14px;
+    margin: 100px;
+    top: 10px;
+}
+/* More chart-specific styles */
+/* --------------------- */
+
+.arc path {
+    stroke: #fff;
+    stroke-width: 2;
+}
+.arc path:hover {
+    pointer-events: all;
+}
+/* #vis styles for bubble charts */
+#vis {
+    width: 950px;
+    height: 550px;
+    margin: auto auto 25px 25px;
+}
+#vis2 {
+    width: 950px;
+    height: 600px;
+    margin: auto auto 25px 25px;
+}
+#vis3 {
+    width: 950px;
+    height: 400px;
+    margin: auto;
+}
+#vis4 {
+    width: 450px;
+    height: 405px;
+    margin: auto;
+}
+#vis5{
+    width: auto;
+    height: 500px;
+    margin: auto;
+}
+/* Style for topLegislators bubble chart */
+.category {
+    font-family: arial, serif;
+    font-size: 18px;
+    font-weight: bold;
+    fill: #000;
+}
+
+/* Style for topGivers bubble chart */
+.category2 {
+    font-family: arial, serif;
+    font-size: 16px;
+    fill: #000;
+}
+.toptext {
+    position: relative;
+    left: 71px;
+    top: 20px;
+    font-family: arial, serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    margin-top: -10;
+}
+.toptext2 {
+    position: relative;
+    left: 98px;
+    top: 20px;
+    font-family: arial, serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+}
+.toptext3 {
+    position: relative;
+    left: 127px;
+    top: 20px;
+    font-family: arial, serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+}
+.toptext4 {
+    position: relative;
+    left: 147px;
+    top: 20px;
+    font-family: arial, serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+}
+.toptext5 {
+    position: relative;
+    left: 175px;
+    top: 20px;
+    font-family: arial, serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+}
+
+/* Style for map legend labels*/
+.keytext {
+    position: relative;
+    left: 57px;
+    top: 9.5px;
+    font-family: arial, serif;
+    font-size: 16px;
+    /*font-weight: bold;*/
+    color: black;
+    background-color: white;
+}
+.keytext2 {
+    position: relative;
+    left: 57px;
+    top: 20px;
+    font-family: arial, serif;
+    font-size: 16px;
+    /*font-weight: bold;*/
+    color: black;
+    background-color: white;
+}
+
+.keytext3 {
+    position: relative;
+    left: 57px;
+    top: 30px;
+    font-family: arial, serif;
+    font-size: 16px;
+    /*font-weight: bold;*/
+    color: black;
+    background-color: white;
+}
+#box {
+    position: relative;
+    left: 11px;
+    top: -50px;
+    width: 40px; 
+    height: 20px;
+    background-color: #B2D8B2;
+}
+#box2 {
+    position: relative;
+    left: 11px;
+    top: -40px;
+    width: 40px; 
+    height: 20px;
+    background-color: #66B266;
+}
+#box3 {
+    position: relative;
+    left: 11px;
+    top: -30px;
+    width: 40px; 
+    height: 20px;
+    background-color: #008000;
+}
+
+/* Styles for local legislators */
+.legislator {
+    float: left;
+    width: 140px;
+    height: auto;
+    margin: 6px;
+    text-align: center;
+
+}
+.legislatortext {
+    width: 145px;
+    float: left;
+    font-family: arial, serif;
+    font-size: 14px;
+    position: relative;
+    top: -5px;
+    left: 5px;
+}
+
+
